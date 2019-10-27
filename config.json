@@ -1,0 +1,8 @@
+{
+    "organization_url": "https://dev.azure.com/slb-swt",
+    "vsts_project_name": "PDI",
+    "environment_name": "PDI-DR-DRILL01",
+    "manual_environments": "PDI-DEV,PDI-YELLOWSTONE-EVD",
+    "pdi_services_list": "PDI_SERVICES.LIST",
+    "vsts_tag_name": "ProdOps.PDS-P4D-1.0.0"
+}

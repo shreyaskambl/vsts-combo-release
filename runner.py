@@ -16,7 +16,9 @@ def main():
     release_client = util.get_release_client(project, release, personal_access_token, config)
 
     validation(release, release_client, config)
-    util.loop_through_release_definitions_to_trigger_release(release, release_client, config)
+    release_summary_status_list = util.loop_through_release_definitions_to_trigger_release(release, release_client, config)
     
+    util.output_release_status(release_summary_status_list)
+
 if __name__ == "__main__":
     main()

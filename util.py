@@ -92,8 +92,11 @@ def loop_through_release_definitions_to_trigger_release (release, release_client
 
         release_summary_status = ReleaseStatusSummary(release_definition.name, triggered_release.name, approval_status, release_completion_status)
         release_summary_status_list.append(release_summary_status)
+        return(release_summary_status_list)
 
-    print (release_summary_status_list)
+def output_release_status(release_summary_status_list):
+    for release_status in release_summary_status_list:
+        print("% -25s % 25s % 25s % 25s" %(release_status.definition_name, release_status.release_name, release_status.approval_status, release_status.status))          
 
 def check_if_tagged_release_exists (release, release_client, config):
     tagged_release_list = {}
